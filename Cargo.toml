@@ -1,0 +1,19 @@
+[package]
+name = "eerie-embedded"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+embedded-alloc = "0.5.1"
+panic-halt = "0.2.0"
+cortex-m-rt = "0.7.3"
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+stm32f3xx-hal = { version = "0.10.0", features = ["stm32f303xc"] } 
+rtt-target = "0.5.0"
+
+[dependencies.eerie]
+path = "../eerie"
+default-features = false
+features = ["runtime"]
